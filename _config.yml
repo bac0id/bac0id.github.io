@@ -3,7 +3,7 @@ theme: jekyll-theme-slate
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
 nav:
-- name: Home
+- name: 主页
   link: /
 - name: 2021年蓝桥杯省赛游记
-  link: /_posts/2021-4-19-2021年蓝桥杯省赛游记.md
+  link: /2021-04-19-2021年蓝桥杯省赛游记.md
