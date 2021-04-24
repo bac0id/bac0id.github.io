@@ -1,7 +1,7 @@
 title: bac0id's Blog
 theme: jekyll-theme-slate
-baseurl: ""
-url: ""
+baseurl: "/Blog"
+url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
