@@ -1,6 +1,6 @@
 title: bac0id's Blog
 theme: jekyll-theme-slate
-baseurl: ""
+baseurl: "/blog-abc"
 url: "https://bac0id.github.io/blog-abc"
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
