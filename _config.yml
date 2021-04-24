@@ -2,7 +2,7 @@ title: bac0id's Blog
 theme: jekyll-theme-slate
 baseurl: ""
 url: ""
-permalink: /Blog/:categories/:year-:month/:title.html
+#permalink: /Blog/:categories/:year-:month/:title.html
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
 nav:
