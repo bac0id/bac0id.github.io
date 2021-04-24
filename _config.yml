@@ -4,6 +4,7 @@ theme: jekyll-theme-slate
 #url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
 #permalink: /:year/:month/:day/:title
+permalink: /:year-:month-:day/:title
 #permalink: /Blog
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
