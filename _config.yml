@@ -1,5 +1,6 @@
 title: bac0id's Blog
 theme: jekyll-theme-slate
+markdown: kramdown
 #baseurl: "/Blog"
 #url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
