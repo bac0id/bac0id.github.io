@@ -19,7 +19,7 @@ timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
 github_username: bac0id
 github:
-- is_project_page: True
+- is_project_page: true
 - owner_name: bac0idD
 - owner_url: https://github.com/bac0id/
 theme: jekyll-theme-slate
