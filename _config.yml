@@ -1,11 +1,11 @@
-title: bac0id's Blog
-lang: zh-CN
+title : bac0id's Blog
+lang : zh-CN
 
 #baseurl: "/Blog"
 #url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
 #permalink: /:year/:month/:day/:title
-permalink: /:year-:month-:day/:title
+permalink : /:year-:month-:day/:title
 #permalink: /Blog
 
 # Conversion
@@ -15,11 +15,11 @@ lsi                 : false
 excerpt_separator   : "\n\n"
 incremental         : false
 
-timezone: Asia/Shanghai
-copyright: bac0id 2021 build by jekyll
-github_username: bac0id
+timezone : sia/Shanghai
+copyright : bac0id 2021 build by jekyll
+github_username : bac0id
 github:
-- is_project_page: true
-- owner_name: bac0idD
-- owner_url: https://github.com/bac0id/
-theme: jekyll-theme-slate
+  - is_project_page : true
+  - owner_name : bac0idD
+  - owner_url : https://github.com/bac0id/
+theme : jekyll-theme-slate
