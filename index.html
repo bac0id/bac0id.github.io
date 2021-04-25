@@ -8,7 +8,7 @@ title: bac0id's Blog
 <ul>
   {% for post in site.posts %}
     <li>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> {{post.date}}
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> {{ post.year-post.month-post-day }}
       <p>{{ post.excerpt | strip_html }}</p>
     </li>
   {% endfor %}

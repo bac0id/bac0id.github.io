@@ -1,14 +1,20 @@
 title: bac0id's Blog
-theme: jekyll-theme-slate
+lang: zh-CN
 markdown: kramdown
+
 #baseurl: "/Blog"
 #url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
 #permalink: /:year/:month/:day/:title
 permalink: /:year-:month-:day/:title
 #permalink: /Blog
+
 timezone: Asia/Shanghai
 copyright: bac0id 2021 build by jekyll
-nav:
-- name: 主页
-  link: /
+github_username: bac0id
+github:
+- is_project_page: True
+- owner_name: bac0idD
+- owner_url: https://github.com/bac0id/
+theme: jekyll-theme-slate
+
