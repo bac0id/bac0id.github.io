@@ -15,7 +15,7 @@ lsi                 : false
 excerpt_separator   : "\n\n"
 incremental         : false
 
-timezone : sia/Shanghai
+timezone : Asia/Shanghai
 copyright : bac0id 2021 build by jekyll
 github_username : bac0id
 github:
