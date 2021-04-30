@@ -22,6 +22,7 @@ github :
   is_project_page : true
   owner_name : bac0id
   owner_url : https://github.com/bac0id/
+  show_forkme : false
 theme : jekyll-theme-slate
 
 # Markdown Processors
