@@ -2,7 +2,7 @@ title : bac0id's Blog
 lang : zh-CN
 
 #baseurl: "/Blog"
-url: "https://bac0id.github.io"
+#url: "https://bac0id.github.io"
 #permalink: /:categories/:year-:month/:title
 #permalink: /:year/:month/:day/:title
 permalink : /:year-:month-:day/:title
