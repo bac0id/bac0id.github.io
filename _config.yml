@@ -13,7 +13,9 @@ markdown            : kramdown
 highlighter         : rouge
 lsi                 : false
 excerpt_separator   : "\n\n"
+#excerpt_separator: <!--more-->
 incremental         : false
+
 
 timezone : Asia/Shanghai
 copyright : bac0id 2020-2022
