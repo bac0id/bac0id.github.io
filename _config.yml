@@ -16,7 +16,7 @@ excerpt_separator   : "\n\n"
 incremental         : false
 
 timezone : Asia/Shanghai
-copyright : bac0id 2021
+copyright : bac0id 2020-2022
 github_username : bac0id
 github :
   is_project_page : true
