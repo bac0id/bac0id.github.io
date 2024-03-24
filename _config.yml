@@ -18,10 +18,10 @@ incremental         : false
 
 
 timezone : Asia/Shanghai
-copyright : bac0id 2020-2022
+copyright : bac0id 2020-2024
 github_username : bac0id
 github :
-  is_project_page : true
+  is_project_page : false
   owner_name : bac0id
   owner_url : https://github.com/bac0id/
   show_forkme : false
