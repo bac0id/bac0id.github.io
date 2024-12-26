@@ -25,10 +25,10 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
 2. 启动虚拟机。
 
 3. 检查新硬盘是否被系统识别：
- ```
- lsblk
- ```
-
+    ```
+    lsblk
+    ```
+    
     示例输出：
     ```
     （省略若干行）
@@ -78,45 +78,45 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     sudo mdadm --detail /dev/md0
     ```
 
- 示例输出和解释：
- ```
- /dev/md0:
-            Version : 1.2
-      Creation Time : Thu Dec 26 23:40:13 2024
-         Raid Level : raid5
-         Array Size : 206848 (202.00 MiB 211.81 MB)  # RAID设备的可用容量
-      Used Dev Size : 103424 (101.00 MiB 105.91 MB)  # RAID设备的组成设备的容量
-       Raid Devices : 3
-      Total Devices : 3
-        Persistence : Superblock is persistent
- 
-        Update Time : Thu Dec 26 23:43:37 2024
-              State : clean 
-     Active Devices : 3
-    Working Devices : 3
-     Failed Devices : 0
-      Spare Devices : 0
- 
-             Layout : left-symmetric
-         Chunk Size : 512K
- 
- Consistency Policy : resync
- 
-               Name : XXXXX
-               UUID : XXXXXXXXXXXXXXXXXX
-             Events : 35
- 
-     Number   Major   Minor   RaidDevice State
-        0       8       16        0      active sync   /dev/sdb
-        2       8       32        1      active sync   /dev/sdc
-        3       8       48        2      active sync   /dev/sdd
- ```
+    示例输出和解释：
+    ```
+    /dev/md0:
+               Version : 1.2
+         Creation Time : Thu Dec 26 23:40:13 2024
+            Raid Level : raid5
+            Array Size : 206848 (202.00 MiB 211.81 MB)  # RAID设备的可用容量
+         Used Dev Size : 103424 (101.00 MiB 105.91 MB)  # RAID设备的组成设备的容量
+          Raid Devices : 3
+         Total Devices : 3
+           Persistence : Superblock is persistent
+    
+           Update Time : Thu Dec 26 23:43:37 2024
+                 State : clean 
+        Active Devices : 3
+       Working Devices : 3
+        Failed Devices : 0
+         Spare Devices : 0
+    
+                Layout : left-symmetric
+            Chunk Size : 512K
+    
+    Consistency Policy : resync
+    
+                  Name : XXXXX
+                  UUID : XXXXXXXXXXXXXXXXXX
+                Events : 35
+    
+        Number   Major   Minor   RaidDevice State
+           0       8       16        0      active sync   /dev/sdb
+           2       8       32        1      active sync   /dev/sdc
+           3       8       48        2      active sync   /dev/sdd
+    ```
 
 5. 保存RAID配置
- ```
- sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
- sudo update-initramfs -u
- ```
+    ```
+    sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
+    sudo update-initramfs -u
+    ```
 
 6. 自动挂载RAID设备
     创建挂载点：
