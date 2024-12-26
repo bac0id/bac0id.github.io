@@ -29,19 +29,19 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
  lsblk
  ```
 
-示例输出：
-```
-（省略若干行）
-sda      8:0    0    20G  0 disk 
-├─sda1   8:1    0     1M  0 part 
-├─sda2   8:2    0   513M  0 part /boot/efi
-└─sda3   8:3    0  19.5G  0 part /
-sdb      8:16   0   102M  0 disk 
-sdc      8:32   0   102M  0 disk 
-sdd      8:48   0   102M  0 disk 
-sde      8:64   0   102M  0 disk 
-```
-示例输出解释：`sda`是系统盘，`sdb, sdc, sdd, sde`是4个后续用于创建RAID的硬盘。
+    示例输出：
+    ```
+    （省略若干行）
+    sda      8:0    0    20G  0 disk 
+    ├─sda1   8:1    0     1M  0 part 
+    ├─sda2   8:2    0   513M  0 part /boot/efi
+    └─sda3   8:3    0  19.5G  0 part /
+    sdb      8:16   0   102M  0 disk 
+    sdc      8:32   0   102M  0 disk 
+    sdd      8:48   0   102M  0 disk 
+    sde      8:64   0   102M  0 disk 
+    ```
+    示例输出解释：`sda`是系统盘，`sdb, sdc, sdd, sde`是4个后续用于创建RAID的硬盘。
 
 #### 使用mdadm创建RAID 5
 
