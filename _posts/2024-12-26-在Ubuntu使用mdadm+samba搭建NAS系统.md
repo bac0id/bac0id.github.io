@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "在Ubuntu使用mdadm+samba搭建NAS系统"
@@ -58,6 +57,7 @@ sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=2 /dev/sdb /dev/
 ```
 cat /proc/mdstat
 ```
+
 示例输出：
 ```
 Personalities : [raid1] [linear] [multipath] [raid0] [raid6] [raid5] [raid4] [raid10] 
@@ -76,6 +76,7 @@ sudo mkfs.ext4 /dev/md0
 ```
 sudo mdadm --detail /dev/md0
 ```
+
 示例输出和解释：
 ```
 /dev/md0:
@@ -109,6 +110,7 @@ Consistency Policy : resync
        2       8       32        1      active sync   /dev/sdc
        3       8       48        2      active sync   /dev/sdd
 ```
+
 5. 保存RAID配置
 ```
 sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
@@ -120,18 +122,22 @@ sudo update-initramfs -u
 ```
 sudo mkdir /mnt/raid
 ```
+
 挂载RAID：
 ```
 sudo mount /dev/md0 /mnt/raid
 ```
+
 设置开机自动挂载，向`/etc/fstab`末尾添加以下内容：
 ```
 /dev/md0 /mnt/raid ext4 defaults 0 0
 ```
+
 7. 验证RAID，检查RAID可用空间
 ```
 df -h
 ```
+
 示例输出与解释：
 ```
 文件系统        容量  已用  可用 已用% 挂载点
@@ -157,6 +163,7 @@ writable = yes
 read only = no
 guest ok = yes
 ```
+
 说明：
 - `RAIDShare`是共享目录名称。在Windows上等同于"本地磁盘"的命名和辨识作用。
 - 公开的读写权限。本文不介绍samba中用户权限管理。
@@ -171,6 +178,7 @@ sudo systemctl restart smbd
 ```
 \\192.168.2.150\RAIDShare
 ```
+
 可见目录下仅有名为`lost+found`的目录，忽略它。创建文件`a.txt`，内容为`Hi`。在Ubuntu虚拟机中，进入`/mnt/raid`目录，可见相同的`a.txt`。反之亦然。
 
 #### 使用mdadm扩充RAID
@@ -181,6 +189,7 @@ sudo systemctl restart smbd
 ```
 sudo mdadm --grow /dev/md0 --raid-devices=4 --add /dev/sde
 ```
+
 示例输出：
 ```
 mdadm: added /dev/sde
@@ -190,6 +199,7 @@ mdadm: Need to backup 3072K of critical section..
 ```
 sudo resize2fs /dev/md0
 ```
+
 示例输出：
 ```
 resize2fs 1.46.5 (30-Dec-2021)
@@ -197,10 +207,12 @@ resize2fs 1.46.5 (30-Dec-2021)
 old_desc_blocks = 1, new_desc_blocks = 1
 /dev/md0 上的文件系统大小已经调整为 77568 个块（每块 4k）。
 ```
+
 3. 验证RAID，检查RAID可用空间
 ```
 df -h
 ```
+
 示例输出和解释：
 ```
 文件系统        容量  已用  可用 已用% 挂载点
