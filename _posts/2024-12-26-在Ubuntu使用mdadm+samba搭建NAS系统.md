@@ -61,9 +61,9 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
 
     示例输出：
     ```
-    Personalities : [raid1] [linear] [multipath] [raid0] [raid6] [raid5] [raid4]  [raid10] 
-    md0 : active raid5 sdd[3] sdc[2] sdb[0]
-          206848 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+    Personalities : [raid6] [raid5] [raid4] [linear] [multipath] [raid0] [raid1] [raid10] 
+    md0 : active raid5 sdd[3] sdc[1] sdb[0]
+       204800 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
           
     unused devices: <none>
     ```
@@ -108,7 +108,7 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     
         Number   Major   Minor   RaidDevice State
            0       8       16        0      active sync   /dev/sdb
-           2       8       32        1      active sync   /dev/sdc
+           1       8       32        1      active sync   /dev/sdc
            3       8       48        2      active sync   /dev/sdd
     ```
 
@@ -174,11 +174,12 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     ```
 
 4. 验证共享目录
+
     在宿主机上访问共享目录。选择此电脑-添加一个网络位置-选择自定义网络位置。地址填入Ubuntu虚拟机的IP和共享目录名称，例如：
     ```
     \\192.168.2.150\RAIDShare
     ```
-    可见目录下仅有名为`lost+found`的目录，忽略它。创建文件`a.txt`，内容为`Hi`。在Ubuntu虚拟机中，进入`/mnt/raid`目录，可见相同的`a.txt`。反之亦然。
+    可见目录下仅有名为`lost+found`的目录，忽略它。创建文件`Hi.txt`，内容为`Hi 123`。在Ubuntu虚拟机中，进入`/mnt/raid`目录，可见相同的`Hi.txt`。反之亦然。
 
 #### 使用mdadm扩充RAID
 
@@ -192,7 +193,6 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     示例输出：
     ```
     mdadm: added /dev/sde
-    mdadm: Need to backup 3072K of critical section..
     ```
 
 2. 扩建文件系统（ext4）
@@ -208,7 +208,9 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     /dev/md0 上的文件系统大小已经调整为 77568 个块（每块 4k）。
     ```
 
-3. 验证RAID，检查RAID可用空间
+3. 验证RAID
+
+    检查RAID可用空间
     ```
     df -h
     ```
@@ -219,6 +221,7 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
     /dev/md0        281M  124K  270M    1% /mnt/raid
     （省略若干行的输出。即使理论上可用空间有300M，实际容量从186M增长为281M，）
     ```
+    在宿主机上进入共享目录，发现之前的`Hi.txt`文件存在，文件内容符合预期，说明成功扩容。
 
 ### 参考文献
 
