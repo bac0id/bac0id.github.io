@@ -114,8 +114,8 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
 
 5. 保存RAID配置
     ```
-    sudo mdadm --detail --scan --verbose | sudo tee -a /etc/mdadm/mdadm.conf
-    sudo update-initramfs -u
+    mdadm -Ds > /etc/mdadm/mdadm.conf
+    update-initramfs -u
     ```
 
 6. 自动挂载RAID设备
