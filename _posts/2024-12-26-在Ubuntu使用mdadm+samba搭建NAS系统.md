@@ -47,7 +47,7 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
 
 1. 创建RAID设备
     ```
-    sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=2 /dev/sdb /dev/sdc /dev/sdd
+    sudo mdadm --create --verbose /dev/md0 --level=5 --raid-devices=3 /dev/sdb /dev/sdc /dev/sdd
     ```
     命令解释：
     - `--verbose /dev/md0`指定RAID设备文件
