@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在Ubuntu使用mdadm+samba搭建NAS系统"
+title: "在Ubuntu使用mdadm和samba搭建NAS系统"
 ---
 
 介绍在VM虚拟机上，在Ubuntu 22.04上，使用mdadm创建RAID 5，并结合samba，实现NAS系统的方法，并介绍RAID 5的扩容方法。本文不介绍samba中用户权限管理。
@@ -225,8 +225,8 @@ title: "在Ubuntu使用mdadm+samba搭建NAS系统"
 
 ### 参考文献
 
-[1] Standard RAID levels [Z/OL]. https://en.wikipedia.org/wiki/Standard_RAID_levels. 
+[1] Standard RAID levels [Z/OL]. [https://en.wikipedia.org/wiki/Standard_RAID_levels](https://en.wikipedia.org/wiki/Standard_RAID_levels). 
 
-[2] MDADM - Adding a new hard disk to an existing RAID1 [Z/OL]. https://unix.stackexchange.com/questions/665389/mdadm-adding-a-new-hard-disk-to-an-existing-raid1. 
+[2] MDADM - Adding a new hard disk to an existing RAID1 [Z/OL]. [https://unix.stackexchange.com/questions/665389/mdadm-adding-a-new-hard-disk-to-an-existing-raid1](https://unix.stackexchange.com/questions/665389/mdadm-adding-a-new-hard-disk-to-an-existing-raid1). 
 
-[3] mdadm.conf file needed? How to create and where? [Z/OL]. https://askubuntu.com/questions/1105829/mdadm-conf-file-needed-how-to-create-and-where.
+[3] mdadm.conf file needed? How to create and where? [Z/OL]. [https://askubuntu.com/questions/1105829/mdadm-conf-file-needed-how-to-create-and-where](https://askubuntu.com/questions/1105829/mdadm-conf-file-needed-how-to-create-and-where).
