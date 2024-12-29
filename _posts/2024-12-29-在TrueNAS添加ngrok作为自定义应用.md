@@ -25,19 +25,15 @@ title: "在TrueNAS添加ngrok作为自定义应用"
 
 1. Application name
 
-应用名称
-```ngrok```
+应用名称：`ngrok`
 
 2. Image Configuration
 
-Repository
-```ngrok/ngrok```
+Repository：`ngrok/ngrok`
 
-标签
-```latest```
+标签：`latest`
 
-Pull Policy
-```Pull the image if it is not already present on the host.```
+Pull Policy：`Pull the image if it is not already present on the host.`
 
 3. Container Configuration
 
