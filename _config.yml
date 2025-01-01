@@ -18,7 +18,7 @@ incremental         : false
 
 
 timezone : Asia/Shanghai
-copyright : bac0id 2020-2024
+copyright : bac0id 2020-current
 github_username : bac0id
 github :
   is_project_page : false
