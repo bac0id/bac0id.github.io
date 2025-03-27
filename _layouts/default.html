@@ -25,16 +25,26 @@
 
   <body>
     <!-- HEADER -->
-    {% include header.html %}
+    <div id="main_content_wrap" class="outer">
+      <footer class="inner">
+        {% include header.html %}
+      </footer>
+    </div>
 
     <!-- MAIN CONTENT -->
-    <main>
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </main>
+    <div id="main_content_wrap" class="outer">
+      <main id="main_content" class="inner">
+        <section>
+          {{ content }}
+        </section>
+      </main>
+    </div>
 
     <!-- FOOTER  -->
-    {% include footer.html %}
+    <div id="header_wrap" class="outer">
+      <header class="inner">
+        {% include footer.html %}
+      </header>
+    </div>
   </body>
 </html>
