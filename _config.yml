@@ -1,39 +1,47 @@
-title : bac0id's Blog
-lang : zh-CN
+# Theme Settings
+theme: jekyll-theme-slate
 
-#baseurl: "/Blog"
-#url: "https://bac0id.github.io"
-#permalink: /:categories/:year-:month/:title
-#permalink: /:year/:month/:day/:title
-permalink : /:year-:month-:day/:title
-#permalink: /Blog
+# Site Settings
+title: bac0id's Blog
+description: Lastest blog posts from bac0id
+lang: zh-CN
+timezone: Asia/Shanghai
+copyright: bac0id 2020-Present
 
-# Conversion
-markdown            : kramdown
-highlighter         : rouge
-lsi                 : false
-excerpt_separator   : "\n\n"
-#excerpt_separator: <!--more-->
-incremental         : false
+# URL and Permalink Settings
+# baseurl: "/Blog" # Uncomment if your site is in a subdirectory
+url: "https://bac0id.github.io" # Your site's domain
+permalink: /:year-:month-:day/:title
+
+# Conversion Settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 
-timezone : Asia/Shanghai
-copyright : bac0id 2020-current
-github_username : bac0id
-github :
-  is_project_page : false
-  owner_name : bac0id
-  owner_url : https://github.com/bac0id/
-  show_forkme : false
-theme : jekyll-theme-slate
+# GitHub Settings
+github_username: bac0id
+github:
+  is_project_page: false
+  owner_name: bac0id
+  owner_url: https://github.com/bac0id/
+  show_forkme: false
 
-# Markdown Processors
+# Markdown Processor: Kramdown
 kramdown:
-  auto_ids          : true
-  entity_output     : as_char
-  toc_levels        : [1, 2, 3, 4, 5, 6]
-  smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
-  hard_wrap         : false
-  footnote_nr       : 1
-  show_warnings     : false
+  auto_ids: true
+  entity_output: as_char
+  toc_levels:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  input: GFM
+  hard_wrap: false
+  footnote_nr: 1
+  show_warnings: false
